@@ -11,4 +11,5 @@ function loadHTML(filePath, elementID) {
   // Charger les pages
 
   loadHTML('/pages/footer.html', 'footer');
+
   
