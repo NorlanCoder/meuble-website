@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page Meuble</title>
+  <link href="../dist/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM6T5zOp8zGzP5C6oheSYBef9T8mN4Jh3NgtES" crossorigin="anonymous" />
+  
+  <link rel="stylesheet" href="swiper-bundle.min.css" />
+  
+
+</head> 
+<body>
+
+  <style>
+    .swiper-pagination-bullet-active {
+  background: #fd761c; 
+}
+  </style>
+<!-- Boutons de catégorie -->
+<div class="flex flex-wrap space-y-2  space-x-4 mt-4 md:mt-0">
+  <button id="best-seller-btn" class="category-btn px-6 py-2 bg-gray-200 text-black rounded-md hover:bg-black hover:text-white transition">
+    Best Seller
+  </button>
+  <button id="chair-btn" class="category-btn px-6 py-2 bg-gray-200 text-black rounded-md hover:bg-black hover:text-white transition">
+    Chair
+  </button>
+  <button id="table-btn" class="category-btn px-6 py-2 bg-gray-200 text-black rounded-md hover:bg-black hover:text-white transition">
+    Table
+  </button>
+  <button id="bed-btn" class="category-btn px-6 py-2 bg-gray-200 text-black rounded-md hover:bg-black hover:text-white transition">
+    Bed
+  </button>
+  <button id="closet-btn" class="category-btn px-6 py-2 bg-gray-200 text-black rounded-md hover:bg-black hover:text-white transition">
+    Closet
+  </button>
+</div> 
+
+<div class="grid">
+  <!-- Les produits s'afficheront ici -->
+</div>
+
+  <script>
+    // Sélectionne la section des produits
+const productContainer = document.querySelector('.grid');
+
+// Tableau contenant les produits pour chaque catégorie
+const products = {
+  bestSeller: [
+    { name: "Fabric Chair", priceOld: "$105.00", priceNew: "$95.00", image: "assets/prod1.png" },
+    { name: "Luxury Table", priceOld: "$250.00", priceNew: "$200.00", image: "assets/prod2.png" },
+    { name: "Modern Sofa", priceOld: "$500.00", priceNew: "$450.00", image: "/src/assets/prod3.png" }
+  ],
+  chair: [
+    { name: "Comfort Chair", priceOld: "$120.00", priceNew: "$100.00", image: "/src/assets/prod4.png" },
+    { name: "Stylish Chair", priceOld: "$140.00", priceNew: "$110.00", image: "/src/assets/prod5.png" },
+    { name: "Executive Chair", priceOld: "$160.00", priceNew: "$130.00", image: "/src/assets/prod6.png" }
+  ],
+  table: [
+    { name: "Wooden Table", priceOld: "$220.00", priceNew: "$190.00", image: "/src/assets/prod7.png" },
+    { name: "Dining Table", priceOld: "$320.00", priceNew: "$270.00", image: "/src/assets/prod8.png" },
+    { name: "Coffee Table", priceOld: "$120.00", priceNew: "$90.00", image: "/src/assets/prod9.png" }
+  ],
+  bed: [
+    { name: "King Bed", priceOld: "$600.00", priceNew: "$550.00", image: "/src/assets/prod10.png" },
+    { name: "Queen Bed", priceOld: "$500.00", priceNew: "$450.00", image: "/src/assets/prod11.png" },
+    { name: "Single Bed", priceOld: "$400.00", priceNew: "$350.00", image: "/src/assets/prod12.png" }
+  ],
+  closet: [
+    { name: "Wooden Closet", priceOld: "$300.00", priceNew: "$250.00", image: "/src/assets/prod13.png" },
+    { name: "Modern Closet", priceOld: "$350.00", priceNew: "$300.00", image: "/src/assets/prod14.png" },
+    { name: "Compact Closet", priceOld: "$200.00", priceNew: "$180.00", image: "/src/assets/prod15.png" }
+  ]
+};
+
+// Fonction pour afficher les produits
+function displayProducts(category) {
+  productContainer.innerHTML = ''; // Vide le conteneur avant d'ajouter de nouveaux produits
+  
+  // Parcourt chaque produit dans la catégorie et l'ajoute au conteneur
+  products[category].forEach(product => {
+    const productHTML = `
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">${product.name}</h3>
+          <div class="flex justify-between items-center mt-2">
+            <div class="">
+              <span class="text-gray-500 line-through">${product.priceOld}</span>
+              <span class="text-lg font-bold text-red-500">${product.priceNew}</span>
+            </div>
+            <div class=" border-2 p-1 border-gray-100 bg-gray-100 rounded-lg ">
+              <a href="http://wa.me/+22967697670"><img src="/src/assets/whatsapp.png" alt="WhatsApp" class="w-6 h-6"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    productContainer.innerHTML += productHTML;
+  });
+}
+
+// Ajouter les écouteurs d'événements aux boutons
+document.getElementById('best-seller-btn').addEventListener('click', () => displayProducts('bestSeller'));
+document.getElementById('chair-btn').addEventListener('click', () => displayProducts('chair'));
+document.getElementById('table-btn').addEventListener('click', () => displayProducts('table'));
+document.getElementById('bed-btn').addEventListener('click', () => displayProducts('bed'));
+document.getElementById('closet-btn').addEventListener('click', () => displayProducts('closet'));
+
+// Par défaut, afficher la catégorie "Best Seller"
+displayProducts('bestSeller');
+
+  </script>
+
+ <div id="heroSection"></div>
+
+<div id="Partners">
+</div>
+
+<section class="py-10  relative">                         
+  <div class="mx-4 mdmx-16">
+   
+    <div class="swiper-container overflow-hidden">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
+          <div class="flex justify-between">
+            <img src="/src/assets/table1.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
+            <div class="pl-4 flex-1"> 
+              <h3 class="text-lg font-bold">Dining Tables</h3>
+              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
+          <div class="flex justify-between">
+            <img src="/src/assets/table2.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
+            <div class="pl-4 flex-1"> 
+              <h3 class="text-lg font-bold">Chairs</h3>
+              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
+          <div class="flex justify-between">
+            <img src="/src/assets/table3.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
+            <div class="pl-4 flex-1">
+              <h3 class="text-lg font-bold">Office Desks</h3>
+              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+            </div>
+          </div>
+        </div>  
+        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
+          <div class="flex justify-between">
+            <img src="/src/assets/meuble3.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
+            <div class="pl-4 flex-1"> 
+              <h3 class="text-lg font-bold">Sofa</h3>
+              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+            </div>
+          </div>
+        </div>
+      
+     
+      </div>
+      <!-- Ajouter les flèches de navigation si nécessaire
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>  
+       Ajouter la pagination si nécessaire -->
+      
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<div id="GalleryAll">
+
+</div>
+
+<div id="ElevateSpace" > 
+</div>
+
+<section class="py-10  relative">                         
+  <div class="mx-4 mdmx-16">
+   
+    <div class="swiper-container overflow-hidden">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
+          <div class="flex justify-between">
+            <img src="/src/assets/meuble1.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
+            <div class="pl-4 flex-1"> 
+              <h3 class="text-lg font-bold">Sofa</h3>
+              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
+          <div class="flex justify-between">
+            <img src="/src/assets/meuble1.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
+            <div class="pl-4 flex-1"> 
+              <h3 class="text-lg font-bold">Sofa</h3>
+              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
+          <div class="flex justify-between">
+            <img src="/src/assets/meuble2.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
+            <div class="pl-4 flex-1">
+              <h3 class="text-lg font-bold">Sofa</h3>
+              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+            </div>
+          </div>
+        </div>  
+        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
+          <div class="flex justify-between">
+            <img src="/src/assets/meuble3.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
+            <div class="pl-4 flex-1"> 
+              <h3 class="text-lg font-bold">Sofa</h3>
+              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+            </div>
+          </div>
+        </div>
+      
+     
+      </div>
+      <!-- Ajouter les flèches de navigation si nécessaire
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>  
+       Ajouter la pagination si nécessaire -->
+      
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+  <div id="Elevate" > 
+  </div>
+
+  <div id="dedicate" > 
+  </div>
+    <div id="gallery">
+    </div>
+    <div id="testimonials" class="">
+    </div>
+
+  <div id="footer">
+  </div>
+  <script src="./js/scriptGallery.js"></script>
+  <script src="./js/main.js"></script>
+ 
+  <script src="./js/swiper-bundle.min.js"></script>
+
+
+
+</body>
+</html>
