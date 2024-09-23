@@ -6,6 +6,18 @@
     <title>Landing Page Meuble</title>
     <link href="../dist/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="../src/assets/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM6T5zOp8zGzP5C6oheSYBef9T8mN4Jh3NgtES"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
 
@@ -14,7 +26,7 @@
 
     <div id="app">
       <header class="header px-[10%] py-4">
-        <div class="top-bar border-b-[1px] pb-2 border-gray-700">
+        <div class="top-bar sm:block hidden border-b-[1px] pb-2 border-gray-700">
           <div class="flex justify-between">
             <div class="infos flex">
               <ul class="flex gap-x-4">
@@ -123,40 +135,145 @@
           <div class="logo">
             <h1>FOURNITURE</h1>
           </div>
-          <div class="menu-list list-none md:flex hidden gap-x-4 font-thin">
+          <div class="menu-list list-none md:flex hidden sm:text-base text-sm gap-x-4 font-thin">
             <li>Home</li>
             <li>About</li>
             <li>Fourniture</li>
             <li>Car Catalogue</li>
             <li>FAQ</li>
           </div>
-          <div class="butons md:flex hidden items-center gap-x-2">
+          <div class="butons md:flex hidden text-sm items-center gap-x-2">
             <a href="#" class="text-orange">Sign in</a>
             <a href="#" class="px-4 py-2 bg-orange text-white rounded-3xl"
               >Sign up</a
             >
           </div>
+            <div class='md:hidden flex z-20 justify-end text-terre'>
+                <svg class='' onClick="updateMenu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line class='line1' x1="3" y1="12" x2="21" y2="12"></line>
+                <line class='line2' x1="3" y1="6" x2="21" y2="6"></line>
+                <line class='line3' x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+          
+        </div>
         </div>
       </header>
 
       <section id="home"></section>
 
-      <section id="saleproducts"></section>
+      <section class="py-10 relative">
+        <div class="md:mx-[8%] mx-16">
+          <div class="swiper-container overflow-hidden">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide bg-gray-100 rounded-lg shadow-md p-6 flex items-center"
+              >
+                <div class="flex justify-between">
+                  <img
+                    src="/src/assets/meuble1.png"
+                    alt="Sofa"
+                    class="w-1/2 object-cover rounded-lg shadow-sm pr-8"
+                  />
+                  <div class="pl-4 flex-1">
+                    <h3 class="text-lg font-bold">Sofa</h3>
+                    <button
+                      class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200"
+                    >
+                      See More
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="swiper-slide bg-gray-100 rounded-lg shadow-md p-6 flex items-center"
+              >
+                <div class="flex justify-between">
+                  <img
+                    src="/src/assets/meuble1.png"
+                    alt="Sofa"
+                    class="w-1/2 object-cover rounded-lg shadow-sm pr-8"
+                  />
+                  <div class="pl-4 flex-1">
+                    <h3 class="text-lg font-bold">Sofa</h3>
+                    <button
+                      class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200"
+                    >
+                      For Sale
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="swiper-slide bg-gray-100 rounded-lg shadow-md p-6 flex items-center"
+              >
+                <div class="flex justify-between">
+                  <img
+                    src="/src/assets/meuble2.png"
+                    alt="Sofa"
+                    class="w-1/2 object-cover rounded-lg shadow-sm pr-8"
+                  />
+                  <div class="pl-4 flex-1">
+                    <h3 class="text-lg font-bold">Sofa</h3>
+                    <button
+                      class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200"
+                    >
+                      For Sale
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide bg-gray-100 rounded-lg shadow-md p-6 flex items-center"
+              >
+                <div class="flex justify-between">
+                  <img
+                    src="/src/assets/meuble3.png"
+                    alt="Sofa"
+                    class="w-1/2 object-cover rounded-lg shadow-sm pr-8"
+                  />
+                  <div class="pl-4 flex-1">
+                    <h3 class="text-lg font-bold">Sofa</h3>
+                    <button
+                      class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200"
+                    >
+                      For Sale
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Ajouter les flèches de navigation si nécessaire
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>  
+         Ajouter la pagination si nécessaire -->
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
 
       <section id="products"></section>
 
-      <section id="elevate"></section>
+      <div id="ElevateSpace"></div>
 
       <section id="someproducts"></section>
 
-      <section id="elevate2"></section>
-
+      <div id="Elevate"></div>
       <section id="dedicate"></section>
 
       <section id="gallery"></section>
+
+      <section id="testimonials" class=""></section>
     </div>
     <section id="footer"></section>
 
     <script src="./js/main.js"></script>
+    <script src="./js/scriptGallery.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script src="./js/swiper-bundle.min.js"></script>
   </body>
 </html>
