@@ -5,19 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page Meuble</title>
   <link href="../dist/output.css" rel="stylesheet">
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM6T5zOp8zGzP5C6oheSYBef9T8mN4Jh3NgtES" crossorigin="anonymous" />
+  
+  <link rel="stylesheet" href="swiper-bundle.min.css" />
+  
+
+</head> 
 <body>
 
-  <!-- Navbar -->
+  <style>
+    .swiper-pagination-bullet-active {
+  background: #fd761c; 
+}
+  </style>
 
-  <div id="app"> 
-    
+
+
+
+<section class="py-10  relative">                         
+  <div class="mx-4 mdmx-16">
+   
+    <div class="swiper-container overflow-hidden">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
+          <div class="flex justify-between">
+            <img src="/src/assets/meuble1.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
+            <div class="pl-4 flex-1"> <!-- Ajout de flex-1 pour remplir l'espace restant -->
+              <h3 class="text-lg font-bold">Sofa</h3>
+              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
+          <div class="flex justify-between">
+            <img src="/src/assets/meuble1.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
+            <div class="pl-4 flex-1"> <!-- Ajout de flex-1 pour remplir l'espace restant -->
+              <h3 class="text-lg font-bold">Sofa</h3>
+              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
+          <div class="flex justify-between">
+            <img src="/src/assets/meuble2.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
+            <div class="pl-4 flex-1"> <!-- Ajout de flex-1 pour remplir l'espace restant -->
+              <h3 class="text-lg font-bold">Sofa</h3>
+              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+            </div>
+          </div>
+        </div>  
+        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
+          <div class="flex justify-between">
+            <img src="/src/assets/meuble3.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
+            <div class="pl-4 flex-1"> <!-- Ajout de flex-1 pour remplir l'espace restant -->
+              <h3 class="text-lg font-bold">Sofa</h3>
+              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+            </div>
+          </div>
+        </div>
+      
+     
+      </div>
+      <!-- Ajouter les flèches de navigation si nécessaire
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>  
+       Ajouter la pagination si nécessaire -->
+      
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
+</section>
+
+  <div id="Elevate" > 
+  </div>
+
+  <div id="dedicate" > 
+  </div>
+    <div id="gallery">
+    </div>
+    <div id="testimonials" class="">
+    </div>
+
   <div id="footer">
-    
   </div>
-
+  <script src="./js/scriptGallery.js"></script>
   <script src="./js/main.js"></script>
+ 
+  <script src="./js/swiper-bundle.min.js"></script>
+
+
+
 </body>
 </html>
