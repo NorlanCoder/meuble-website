@@ -14,7 +14,7 @@ function loadHTML(filePath, elementID, callback) {
  
   // Charger les pages et initialiser le modal après le chargement
 
-
+  loadHTML('/pages/ElevateSpace.html', 'ElevateSpace');
   loadHTML('/pages/ElevateSection.html', 'Elevate');
   loadHTML('/pages/DedicateSection.html', 'dedicate');
   loadHTML('/pages/gallery.html', 'gallery', initializeGalleryModal); // Le callback `initializeGalleryModal` est appelé après le chargement de la galerie
