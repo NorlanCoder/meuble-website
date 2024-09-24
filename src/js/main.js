@@ -15,7 +15,7 @@ function loadHTML(filePath, elementID, callback) {
   // Charger les pages et initialiser le modal après le chargement
   loadHTML('/pages/HeroSection.html', 'heroSection');
   loadHTML('/pages/PartnerSection.html', 'Partners');
-  loadHTML('/pages/GalleryAll.html', 'GalleryAll');
+  loadHTML('/pages/GalleryAll.html', 'GalleryAll',initializeGalleryAll);
   loadHTML('/pages/ElevateSpace.html', 'ElevateSpace');
   loadHTML('/pages/ElevateSection.html', 'Elevate');
   loadHTML('/pages/DedicateSection.html', 'dedicate');
