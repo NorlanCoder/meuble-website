@@ -28,7 +28,7 @@
 <!--Navbar-->
 <div id="app">
       
-  <header class="header px-8 md:px-24 py-4">
+  <header class="header px-6 md:px-12 lg:px-28 py-4">
     <div class="top-bar sm:block hidden border-b-[1px] pb-2 border-gray-700">
       <div class="flex justify-between">
         <div class="infos flex">
@@ -139,11 +139,11 @@
         <h1 class="text-2xl md:text-xl lg:text-3xl font-bold">FOURNITURE</h1>
       </div>
       <div class="menu-list list-none md:flex hidden sm:text-base text-sm gap-x-4 font-thin">
-        <li class="font-medium  text-lg lg:text-xl xl:text-2xl">Home</li>
-        <li class="font-medium  text-lg lg:text-xl xl:text-2xl">About</li>
-        <li class="font-medium text-lg lg:text-xl xl:text-2xl">Fourniture</li>
-        <li class="font-medium text-lg lg:text-xl xl:text-2xl">Car Catalogue</li>
-        <li class="font-medium  text-lg lg:text-xl xl:text-2xl">FAQ</li>
+        <li class="font-medium  text-lg lg:text-xl xl:text-2xl"><a href="#" class="">Accueil</a></li>
+        <li class="font-medium  text-lg lg:text-xl xl:text-2xl"><a href="#vente" class="">En vente</a></li>
+        <li class="font-medium text-lg lg:text-xl xl:text-2xl"><a href="#GalleryAll" class="">Catalogue</a></li>
+        <li class="font-medium text-lg lg:text-xl xl:text-2xl"><a href="#testimonials" class="">Temoignage</a></li>
+       
       </div>
       <!-- <div class="butons md:flex hidden text-sm items-center gap-x-2">
         <a href="#" class="text-oran">Sign in</a>
@@ -180,47 +180,100 @@
 <div id="Partners">
 </div>
 
-<section class="py-10  relative">                         
+<section id="vente" class="py-10  relative">                         
   <div class="px-6 md:px-16 lg:px-32">
    
     <div class="swiper-container overflow-hidden">
       <div class="swiper-wrapper">
-        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
-          <div class="flex justify-between">
-            <img src="/src/assets/table1.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
-            <div class="pl-4 flex-1"> 
-              <h3 class="text-lg font-bold">Dining Tables</h3>
-              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+        <div class="swiper-slide bg-gray-100 rounded-lg shadow-md p-6 flex justify-center items-center"> 
+          <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+            
+            <!-- Image -->
+            <img src="/src/assets/table1.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm" />
+            
+            <!-- Texte et contenu -->
+            <div class="text-center md:text-left flex-1">
+              <h3 class="text-xl font-bold mb-4">Tble1</h3>
+                   <!-- Bouton Acheter -->
+                   <button class="mt-2 mb-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">Acheter</button>
+              <!-- Paragraphe avec flèches -->
+              <div class="space-y-2">
+                <p class="flex items-center"><span class="mr-2">➤</span> Texte ici</p>
+                <p class="flex items-center"><span class="mr-2">➤</span> Texte ici</p>
+                <p class="flex items-center"><span class="mr-2">➤</span> Texte ici</p>
+              </div>
+              
             </div>
+            
           </div>
         </div>
         
-        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
-          <div class="flex justify-between">
-            <img src="/src/assets/table2.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
-            <div class="pl-4 flex-1"> 
-              <h3 class="text-lg font-bold">Chairs</h3>
-              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+        <div class="swiper-slide bg-gray-100 rounded-lg shadow-md p-6 flex justify-center items-center"> 
+          <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+            
+            <!-- Image -->
+            <img src="/src/assets/table2.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm" />
+            
+            <!-- Texte et contenu -->
+            <div class="text-center md:text-left flex-1">
+              <h3 class="text-xl font-bold mb-4">Chairs</h3>
+                   <!-- Bouton Acheter -->
+                   <button class="mt-2 mb-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">Acheter</button>
+              <!-- Paragraphe avec flèches -->
+              <div class="space-y-2">
+                <p class="flex items-center"><span class="mr-2">➤</span> Texte ici</p>
+                <p class="flex items-center"><span class="mr-2">➤</span> Texte ici</p>
+                <p class="flex items-center"><span class="mr-2">➤</span> Texte ici</p>
+              </div>
+              
             </div>
+            
           </div>
         </div>
 
-        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
-          <div class="flex justify-between">
-            <img src="/src/assets/table3.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
-            <div class="pl-4 flex-1">
-              <h3 class="text-lg font-bold">Office Desks</h3>
-              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+        <div class="swiper-slide bg-gray-100 rounded-lg shadow-md p-6 flex justify-center items-center"> 
+          <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+            
+            <!-- Image -->
+            <img src="/src/assets/table3.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm" />
+            
+            <!-- Texte et contenu -->
+            <div class="text-center md:text-left flex-1">
+              <h3 class="text-xl font-bold mb-4">Sofa</h3>
+                   <!-- Bouton Acheter -->
+                   <button class="mt-2 mb-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">Acheter</button>
+              <!-- Paragraphe avec flèches -->
+              <div class="space-y-2">
+                <p class="flex items-center"><span class="mr-2">➤</span> Texte ici</p>
+                <p class="flex items-center"><span class="mr-2">➤</span> Texte ici</p>
+                <p class="flex items-center"><span class="mr-2">➤</span> Texte ici</p>
+              </div>
+              
             </div>
+            
           </div>
-        </div>  
-        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
-          <div class="flex justify-between">
-            <img src="/src/assets/meuble3.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
-            <div class="pl-4 flex-1"> 
-              <h3 class="text-lg font-bold">Sofa</h3>
-              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
+        </div>
+
+        <div class="swiper-slide bg-gray-100 rounded-lg shadow-md p-6 flex justify-center items-center"> 
+          <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+            
+            <!-- Image -->
+            <img src="/src/assets/table2.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm" />
+            
+            <!-- Texte et contenu -->
+            <div class="text-center md:text-left flex-1">
+              <h3 class="text-xl font-bold mb-4">Sofa</h3>
+                   <!-- Bouton Acheter -->
+                   <button class="mt-2 mb-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">Acheter</button>
+              <!-- Paragraphe avec flèches -->
+              <div class="space-y-2">
+                <p class="flex items-center"><span class="mr-2">➤</span> Texte ici</p>
+                <p class="flex items-center"><span class="mr-2">➤</span> Texte ici</p>
+                <p class="flex items-center"><span class="mr-2">➤</span> Texte ici</p>
+              </div>
+              
             </div>
+            
           </div>
         </div>
       
@@ -243,64 +296,10 @@
 <div id="ElevateSpace" > 
 </div>
 
-<section class="py-10  relative">                         
-  <div class="px-6 md:px-16 lg:px-32">
-   
-    <div class="swiper-container overflow-hidden">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
-          <div class="flex justify-between">
-            <img src="/src/assets/meuble1.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
-            <div class="pl-4 flex-1"> 
-              <h3 class="text-lg font-bold">Sofa</h3>
-              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
-            </div>
-          </div>
-        </div>
-        
-        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
-          <div class="flex justify-between">
-            <img src="/src/assets/meuble1.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
-            <div class="pl-4 flex-1"> 
-              <h3 class="text-lg font-bold">Sofa</h3>
-              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
-            </div>
-          </div>
-        </div>
 
-        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
-          <div class="flex justify-between">
-            <img src="/src/assets/meuble2.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
-            <div class="pl-4 flex-1">
-              <h3 class="text-lg font-bold">Sofa</h3>
-              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
-            </div>
-          </div>
-        </div>  
-        <div class="swiper-slide  bg-gray-100 rounded-lg shadow-md p-6 flex items-center">
-          <div class="flex justify-between">
-            <img src="/src/assets/meuble3.png" alt="Sofa" class="w-1/2 object-cover rounded-lg shadow-sm pr-8" />
-            <div class="pl-4 flex-1"> 
-              <h3 class="text-lg font-bold">Sofa</h3>
-              <button class="mt-2 bg-white text-black font-medium py-2 px-4 rounded-full shadow-md hover:bg-gray-200">See More</button>
-            </div>
-          </div>
-        </div>
-      
-     
-      </div>
-      <!-- Ajouter les flèches de navigation si nécessaire
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>  
-       Ajouter la pagination si nécessaire -->
-      
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>
 
-  <div id="Elevate" > 
-  </div>
+  <!-- <div id="Elevate" > 
+  </div> -->
 
   <div id="dedicate" > 
   </div>
@@ -314,7 +313,7 @@
   <div id="footer">
   </div>
  
-  <script src="./js/scriptGallery.js"></script>
+  <script src="./js/scriptGallery.js"></script>  
   <script src="./js/scriptGalleryAll.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/swiper-bundle.min.js"></script> 

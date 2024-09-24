@@ -52,30 +52,25 @@ const productHTML = `
     <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover">
     <div class="p-4">
       <h3 class="text-xl font-semibold text-gray-800">${product.name}</h3>
-<div class="flex justify-between items-center mt-4">
+
+       <div class="flex justify-between items-center mt-4">
   <div class="">
     <span class="text-gray-500 line-through">${product.priceOld}</span>
     <span class="text-lg font-bold text-red-500 ml-2">${product.priceNew}</span>
   </div>
 
-
-  <div class="flex items-center space-x-2">
-    <p class="text-sm md:text-md lg:text-md xl:text-xl font-semibold">
-      Commander
-    </p>
   
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-    </svg>
-  </div>
-
- 
-  <div class="border-2 border-gray-200 bg-gray-100 p-1 rounded-lg">
-    <a href="http://wa.me/+22967697670">
-      <img src="/src/assets/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
+  <div class="flex items-center space-x-2 border-2 border-gray-200 bg-gray-100 p-2 rounded-lg">
+    <!-- Lien WhatsApp avec icône et texte -->
+    <a href="http://wa.me/+22967697670" class="flex items-center space-x-2">
+      <span class="text-sm md:text-md lg:text-md xl:text-xl font-semibold">
+        Commander
+      </span>
+       <img src="/src/assets/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
     </a>
   </div>
 </div>
+
 
     </div>
   </div>
@@ -94,5 +89,48 @@ document.getElementById('closet-btn').addEventListener('click', () => displayPro
 
 // Par défaut, afficher la catégorie "Best Seller"
 displayProducts('bestSeller');
+
+
+// Fonction pour changer l'état actif
+function setActiveButton(buttonId) {
+  // Récupérer tous les boutons de catégorie
+  const buttons = document.querySelectorAll('.category-btn');
+
+  // Boucle sur chaque bouton et supprimer la classe "active"
+  buttons.forEach(button => {
+    button.classList.remove('bg-black', 'text-white');
+    button.classList.add('bg-gray-200', 'text-black');
+  });
+
+  // Ajouter les classes "active" au bouton cliqué
+  const activeButton = document.getElementById(buttonId);
+  activeButton.classList.remove('bg-gray-200', 'text-black');
+  activeButton.classList.add('bg-black', 'text-white');
+}
+
+// Ajouter des événements de clic sur chaque bouton
+document.getElementById('best-seller-btn').addEventListener('click', () => {
+  setActiveButton('best-seller-btn');
+});
+
+document.getElementById('chair-btn').addEventListener('click', () => {
+  setActiveButton('chair-btn');
+});
+
+document.getElementById('table-btn').addEventListener('click', () => {
+  setActiveButton('table-btn');
+});
+
+document.getElementById('bed-btn').addEventListener('click', () => {
+  setActiveButton('bed-btn');
+});
+
+document.getElementById('closet-btn').addEventListener('click', () => {
+  setActiveButton('closet-btn');
+});
+
+// Activer le bouton "Best Seller" par défaut
+setActiveButton('best-seller-btn');
+
 
 }
