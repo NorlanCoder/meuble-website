@@ -63,7 +63,7 @@ const productHTML = `
   <div class="flex items-center space-x-2 border-2 border-gray-200 bg-gray-100 p-2 rounded-lg">
     <!-- Lien WhatsApp avec icône et texte -->
     <a href="http://wa.me/+22967697670" class="flex items-center space-x-2">
-      <span class="text-sm md:text-md lg:text-md xl:text-xl font-semibold">
+      <span class="text-xs md:text-md lg:text-md xl:text-xl font-semibold">
         Commander
       </span>
        <img src="/src/assets/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
